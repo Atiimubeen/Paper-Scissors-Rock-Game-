@@ -6,6 +6,12 @@ fun main() {
     print("Enter your Choice: Paper, Rock, Scissors: ")
     playerChoice = readln().capitalize()
 
+    // ✅ NEW: Validate input
+    if (playerChoice !in listOf("Rock", "Paper", "Scissors")) {
+        println("Invalid choice! Please enter Rock, Paper, or Scissors.")
+        return
+    }
+
     val randomNumber = (1..3).random()
 
     when (randomNumber) {
